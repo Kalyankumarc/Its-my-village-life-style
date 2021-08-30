@@ -1,0 +1,18 @@
+body{
+	background:green;
+	
+	}
+#frm{
+	border:solid gray 1px;
+	width:20%;
+	border-radius:5px;
+	margin:100px auto;
+	background:green;
+	padding:50px;
+	}
+#btn{
+	color:blue;
+	background:white;
+	padding:5px;
+	margin-left:69%;
+	}	

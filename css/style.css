@@ -1,0 +1,147 @@
+p  {
+    color: blue;
+    font-family: Times New Roman;
+    font-size: 18px;
+	font-weight:normal;
+}
+body{
+	background-color:green;
+	}
+.mySlides{
+		width:900px; 
+		height:400px;
+	
+}
+.content{
+			background-color:green;
+			width:1210px;
+			overflow:auto;
+			margin:auto;
+			border:2px solid red;
+		}
+.header_bg{
+			width:1200px;
+			height:130px;
+			margin:auto;
+			margin: 3px auto;
+			background-color:none;
+			border:2px solid yellow;
+			}		
+.header{
+		
+		color:green;
+		width:1200px;
+		height:126px;
+		//background-color:red;
+		margin: 3px auto;
+		padding:0px;
+		background:  -webkit-gradient(linear, left top, left bottom, from(green), to(red));
+		}
+span{
+	padding:10px 0px;
+	color:white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	font-weight:bold;
+	}
+.marquee{
+		width:1200px;
+		margin:2px;
+		border:2px solid fuchsia;
+		font-size:17px;
+		height:20px;
+		background-color:silver;
+		}
+.body_bg{
+			width:1200px;
+			margin:auto;
+			background-color:white;
+			padding:0px 0px 0px 0px;
+			border:2px solid yellow;
+		}	
+#nav{
+	font:left;
+	width:270px;
+	color:yellow;
+	border-style: outset;
+	border: 2px solid red;
+    border-radius: 8px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: green;
+    border: opx solid #555;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+	border-bottom: 2px solid red;
+}
+
+li {
+	font-weight: bold;
+    text-align: center;
+    border-bottom: 0px solid gray;
+	background: url(images/main-delimiter.png) 100% 1px no-repeat;
+	overflow:200px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a.active {
+    background-color: green;
+    color: white;
+}
+
+li a:hover:not(.active) {
+			background-color:red;
+			color: white;
+			border-radius:0px 60px;
+			transition:all 1s;
+		}
+#information{
+			font:right;
+			width:920px;
+			color:blue;
+			border-style: outset;
+			border: 2px solid blue;
+			border-radius: 8px;	
+			font-family:times new roman;
+			font-weight:bold;
+			padding:4px 0px 3px 6px;
+				}
+	
+.footer{
+		border:2px solid yellow;
+		margin:3px;
+		color:white;
+		width:1200px;
+		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+		}
+	h3,h4{
+		color:white;
+		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+		font-weight:bold;
+					
+			}	
+#frm{
+	border:solid gray 1px;
+	width:20%;
+	border-radius:5px;
+	margin:100px auto;
+	background:green;
+	padding:50px;
+	}
+#btn{
+	color:blue;
+	background:white;
+	padding:5px;
+	margin-left:69%;
+	}				
