@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<title>It's My Village Life Style</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="app.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style>
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+</style>
+
+</head>
+<body>
+	<div class="content">
+		<div class="header_bg">
+			<div class ="header">
+				<br/><span style="font-size:30px;padding-left:450px;">It's My Village Life Style</span><br/>
+				<span style="font-size:18px;padding-left:750px;color:red;">Friends &Family Members</span><br/>
+				<span style="font-size:25px; padding:10px 0px 10px 90px;">KKV VILLAGE</span>
+			</div>
+		</div>
+		<div class="marquee">
+			<marquee><b><font color="red">Thank you for visiting www.kkvvillage.html  :: <font color="white"> Please give the feedback on our website  :: <font color="green">Also if you have any pictures or information please forward to admin@kkvvillage.com Thank You, Have a Great Day :)</b> </marquee>
+		</div>
+		<div class="body_bg" style="width: 1200px;">
+			<iframe src="nav.htm"  title="Iframe Example"></iframe>
+			<div id="information" style="float:right;">
+				<div id="details" style="float:left; width:70%">		
+					<div ng-app = "myApp" class = "container" style="width:680px">
+						<div ng-controller = "RegisterController">
+							<!--Login page Start-->
+							<div ng-show="ifLoginUser">
+								<div style="text-align:center;">
+									<h3><b>User Login Form</b></h3>
+								</div>
+								<form role = "form" class="well">
+									<div class = "form-group">
+										<label for = "name"> Name:  </label>
+										<input type = "text" id = "name" class = "form-control" placeholder = "Enter Name " ng-model = "newuser.name">
+									</div>
+									<div class = "form-group">
+										<label for = "password"> Password:  </label>
+										<input type = "password" id = "password" class = "form-control" placeholder = "Enter Password " ng-model = "newuser.password">
+									</div>
+									<input type="hidden" ng-model="newuser.id">
+									<input type="button" class="btn btn-primary" ng-click="loginUserHome()" class="btn btn-primary" value = "Submit">
+									<input type="button" class="btn btn-primary" ng-click="registrationPage()" class="btn btn-primary" value = "New User Register">
+								</form>
+							</div>
+							<!--Login page end-->
+							<!--Registraion page Start-->
+							<div ng-show="ifRegistationUser">
+								<div style="text-align:center;">
+									<h3><b>User Registraion Form</b></h3>
+								</div>
+								<form role = "form" class="well">
+									<div class = "form-group">
+										<label for = "name"> Name:  </label>
+										<input type = "text" id = "name" class = "form-control" placeholder = "Enter Name " ng-model = "newuser.name">
+									</div>
+									<div class = "form-group">
+										<label for = "email"> Email:  </label>
+										<input type = "email" id = "email" class = "form-control" placeholder = "Enter Email " ng-model = "newuser.email">
+									</div>
+									<div class = "form-group">
+										<label for = "password"> Password:  </label>
+										<input type = "password" id = "password" class = "form-control" placeholder = "Enter Password " ng-model = "newuser.password">
+									</div>
+									<div class = "form-group">
+										<label for = "phone"> Phone:  </label>
+										<input type = "text" id = "phone" class = "form-control" placeholder = "Enter Phone " ng-model = "newuser.phone">
+									</div>
+									<br>
+									<input type="hidden" ng-model="newuser.id">
+									<input type="button" class="btn btn-primary" ng-click="saveUser()" class="btn btn-primary" value = "Submit">
+									<input type="button" class="btn btn-primary" ng-click="searchUser()" class="btn btn-primary" value = "User Registration Deatials">
+									<input type="button" class="btn btn-primary" ng-click="loginUser()" class="btn btn-primary" value = "Login Page">
+								</form>
+							</div>
+							<!--Registraion page end-->
+							<!--User Registraion Deatials page start-->
+							<div ng-show="ifSearchUser">
+								<div><h4><b>Registered Users</b></h4>
+									<table ng-if="users.length" class = "table table-striped table-bordered table-hover">
+										<thead>
+											<tr class = "info">
+												<th>UserId</th>
+												<th>Name</th>
+												<th>Email</th>
+												<th>Phone</th>
+												<th>Password</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr ng-repeat = "user in users">
+												<td>{{ user.id }}</td>
+												<td>{{ user.name }}</td>
+												<td>{{ user.email }}</td>
+												<td>{{ user.phone }}</td>
+												<td>{{ user.password }}</td>
+												<td>
+												<a href="#" ng-click="edit(user.id)" role = "button" class = "btn btn-info">edit</a> &nbsp;
+												<a href="#" ng-click="delete(user.id)" role = "button" class = "btn btn-danger">delete</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<div ng-hide="users.length > 0">No Users Found</div>
+								</div>
+								<div align="right">
+									<a href="#" ng-click="loginUser()" class = "btn btn-info">{{loginTitle}}</a>
+									<a href="#" ng-click="registrationPage()" class = "btn btn-info">{{registationUsertitle}}</a>
+								</div>
+							</div>
+							<!--User Registraion Deatials page end-->
+						</div>
+					</div>
+				</div>
+				<div id="img" style="float:right">
+					<img src="images/motional images/1.gif" width="230px" height="300">
+				</div>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		<div class="footer"><div class="copy">&copy; Copyright 2016, KKV Learning Solutions Inc.</div> 
+	</div>	
+</body>
+
+</html>
